@@ -10,9 +10,10 @@ except:
 
 medical_bot = ChatBot('Bot')
 trainer = ListTrainer(medical_bot)
-for file in os.listdir('./NLP-chatbot/data'):
+for file in os.listdir('./data'):
         print('Training using '+file)
-        convData = open('./NLP-chatbot/data/' + file).readlines()
+        convData = open('./data/' + file).readlines()
+        print(convData)
         trainer.train(convData)
         print("Training completed for "+file)
     
